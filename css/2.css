@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.test-container, .result-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+.progress-container {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 2%;
+    background-color: #3498db;
+    transition: width 0.3s ease;
+}
+
+#progressText {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.question-container {
+    margin: 30px 0;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+.question.active {
+    display: block;
+}
+
+.question-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.answer-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.option {
+    padding: 12px 15px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.option:hover {
+    background-color: #d6eaf8;
+}
+
+.option.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+.nothing-option {
+    margin-top: 15px;
+    padding: 12px 15px;
+    background-color: #f8d7da;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.nothing-option:hover {
+    background-color: #f5c6cb;
+}
+
+.nothing-option.selected {
+    background-color: #dc3545;
+    color: white;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+#restartBtn {
+    display: block;
+    margin: 30px auto 0;
+    background-color: #2ecc71;
+}
+
+#restartBtn:hover {
+    background-color: #27ae60;
+}
+
+.result-container h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+#topProfession {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.other-result {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.other-result .profession-name {
+    font-weight: bold;
+}
+
+.percentage-bar {
+    height: 20px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.percentage-bar-fill {
+    height: 100%;
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+.toggle-percentage {
+    color: #3498db;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .test-container, .result-container {
+        padding: 15px;
+    }
+    
+    .question-text {
+        font-size: 16px;
+    }
+    
+    .option, .nothing-option {
+        padding: 10px;
+    }
+}
+
+/* Добавляем в конец файла */
+.option.multi-selected {
+    background-color: #3498db;
+    color: white;
+    border-left: 5px solid #2980b9;
+}
+
+.option.selected {
+    background-color: #3498db;
+    color: white;
+}
