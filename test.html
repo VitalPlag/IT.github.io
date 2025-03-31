@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест на IT-профессию</title>
+    <link rel="stylesheet" href="./css/test.css">
+</head>
+<body>
+    <div class="test-container">
+        <h1>Тест на определение IT-профессии</h1>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+            <span id="progressText">1/50</span>
+        </div>
+        
+        <div class="question-container" id="questionContainer">
+            <!-- Вопросы будут вставлены здесь динамически -->
+        </div>
+        
+        <div class="navigation-buttons">
+            <button id="prevBtn" disabled>Назад</button>
+            <button id="nextBtn">Далее</button>
+        </div>
+    </div>
+    
+    <div class="result-container" id="resultContainer" style="display: none;">
+        <h2 id="mainResult">Вам необходимо обратить внимание на <span id="topProfession"></span></h2>
+        <div class="other-results" id="otherResults">
+            <!-- Другие результаты будут вставлены здесь -->
+        </div>
+        <button id="restartBtn">Пройти тест снова</button>
+    </div>
+    
+    <script src="./js/test.js"></script>
+</body>
+</html>
